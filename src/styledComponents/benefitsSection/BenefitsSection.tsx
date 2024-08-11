@@ -1,5 +1,6 @@
 import Image from "next/image"
 
+
 export const BenefitsSection = () => {
     return (
         <section className="benefits-section">

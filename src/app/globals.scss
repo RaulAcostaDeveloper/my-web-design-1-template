@@ -102,6 +102,10 @@ form {
     #submit:hover {
         background: $color-one;
     }
+
+    input[type="button"] {
+        cursor: pointer;
+    }
 }
 
 .bg-gradient {

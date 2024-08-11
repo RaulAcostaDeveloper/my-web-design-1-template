@@ -113,12 +113,12 @@ footer {
 
     footer .footer-copyright {
         flex-direction: column-reverse;
-        align-items: start;
+        align-items: flex-start;
         gap: 10px;
     }
 
     footer .footer-copyright .copyright-right {
         flex-direction: column;
-        align-items: start;
+        align-items: flex-start;
     }
 }

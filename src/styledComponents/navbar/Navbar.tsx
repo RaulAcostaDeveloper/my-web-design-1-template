@@ -82,7 +82,7 @@ export const Navbar = () => {
                     </div>
                     <div id="menu">
                         {contentOfNavbar?.menuSections.map(el => (
-                            <a href={el.href} onClick={closeNav}>{el.title}</a>
+                            <a key={el.title} href={el.href} onClick={closeNav}>{el.title}</a>
                         ))}
                         <div className="menu-btn mob">
                             <a href={contentOfNavbar.principalButton.href}>{contentOfNavbar.principalButton.title}</a>
