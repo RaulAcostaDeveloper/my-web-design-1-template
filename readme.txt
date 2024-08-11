@@ -6,3 +6,5 @@ El layout.tsx es el elemento que se va a renderizar a partir de la ruta actuál
 El layout.tsx es heredado por las rutas hijas
 El page.tsx es el elemento que se va a renderizar en la ruta actuál
 1._ Importar todos los archivos .sass a /src/app/global.scss
+Configura los objetos de configuración para cada componente de estilos.
+Asegura usar entidades para caracteres especiales. Ejemplo: á: &aacute;
