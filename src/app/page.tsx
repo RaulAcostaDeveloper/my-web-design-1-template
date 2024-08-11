@@ -12,7 +12,6 @@ import { Navbar } from "@/styledComponents/navbar/Navbar";
 import { ProblemSection } from "@/styledComponents/problemSection/ProblemSection";
 import { TestimonialSection } from "@/styledComponents/testimonialSection/TestimonialSection";
 import { useEffect } from "react";
-import Splide from '@splidejs/splide';
 import AOS from 'aos';
 import 'aos/dist/aos.css';  // Importa los estilos de AOS
 import '@splidejs/splide/dist/css/splide.min.css';
@@ -56,8 +55,8 @@ export default function Home() {
       {/* <LogoSection/> */}
       {/* <ProblemSection/> */}
       {/* <CauseSection /> */}
-      <FixProblemSection/>
-      {/* <FixProblemInnerSection1/> */}
+      {/* <FixProblemSection/> */}
+      <FixProblemInnerSection1/>
       {/* <FixProblemInnerSection2/> */}
       {/* <TestimonialSection/> */}
       {/* <BenefitsSection/> */}

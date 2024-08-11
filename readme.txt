@@ -8,3 +8,5 @@ El page.tsx es el elemento que se va a renderizar en la ruta actuál
 1._ Importar todos los archivos .sass a /src/app/global.scss
 Configura los objetos de configuración para cada componente de estilos.
 Asegura usar entidades para caracteres especiales. Ejemplo: á: &aacute;
+Las propiedades de elementos que son arreglos como contentOfFixProblemInnerSection1.cards ya tienen el número ideal de elementos a renderizar
+Sin embargo en algunos casos se seguiran viendo bien si añadimos más elementos y en otros casos no.
