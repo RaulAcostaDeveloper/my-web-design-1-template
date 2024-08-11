@@ -24,7 +24,15 @@ const contentOfNavbar = {
             href: '#',
             title: 'Resources'
         },
-    ]
+    ],
+    principalButton: {
+        title: 'Sign Up',
+        href: '#'
+    },
+    cart: {
+        href: '#',
+        quantity: 0
+    }
 }
 
 export const Navbar = () => {
@@ -73,22 +81,22 @@ export const Navbar = () => {
                         </a>
                     </div>
                     <div id="menu">
-                        {contentOfNavbar.menuSections.map( el => (
+                        {contentOfNavbar?.menuSections.map(el => (
                             <a href={el.href} onClick={closeNav}>{el.title}</a>
                         ))}
                         <div className="menu-btn mob">
-                            <a href="#">Sign Up</a>
+                            <a href={contentOfNavbar.principalButton.href}>{contentOfNavbar.principalButton.title}</a>
                         </div>
                         <div className="menu-item desk">
-                            <a href="#">Cart (0)</a>
+                            <a href={contentOfNavbar.cart.href}>Cart ({contentOfNavbar.cart.quantity})</a>
                         </div>
                     </div>
                     <div className="menu-btn desk">
-                        <a href="#">Sign Up</a>
+                        <a href={contentOfNavbar.principalButton.href}>{contentOfNavbar.principalButton.title}</a>
                     </div>
                     <div className="mob-menu">
                         <div className="menu-item mob">
-                            <a href="#">Cart (0)</a>
+                            <a href={contentOfNavbar.cart.href}>Cart ({contentOfNavbar.cart.quantity})</a>
                         </div>
                         <div id="menuToggle" className="navbar-toggler" onClick={toggleMenu}>☰</div>
                     </div>
