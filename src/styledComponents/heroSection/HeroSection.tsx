@@ -1,35 +1,33 @@
 import Image from "next/image"
 
-const contentOfHeroSection = {
-    title: 'A smart solution for all your social media marketing needs.',
-    subTitle: 'Plan, engage, and analyse with ease. Transform your social media strategy with an all-in-one platform.',
-    form: {
-        placeholder: 'Enter your mail',
-        srcIcon: '/img/mail.png',
-        button: {
-            title: 'Start for free',
-            callBack: () => { console.log('button ressed') }
-        }
-    },
-    features: [
-        {
-            title: 'Free 14-day Demo'
-        },
-        {
-            title: 'No credit card needed'
-        },
-        {
-            title: 'No Setup'
-        }
-    ],
-    principalImageSrc: './img/laptop.png',
-    socialMediaIconSrc1: './img/laptop-ig.svg',
-    socialMediaIconSrc2: './img/laptop-tt.svg',
-    socialMediaIconSrc3: './img/laptop-fb.svg',
-    waveImageSrc: './img/hero-wave.png'
+interface Button {
+    title: string;
+    callBack: () => void;
 }
 
-export const HeroSection = () => {
+interface Form {
+    placeholder: string;
+    srcIcon: string;
+    button: Button;
+}
+
+interface Feature {
+    title: string;
+}
+
+interface HeroSectionContent {
+    title: string;
+    subTitle: string;
+    form: Form;
+    features: Feature[];
+    principalImageSrc: string;
+    socialMediaIconSrc1: string;
+    socialMediaIconSrc2: string;
+    socialMediaIconSrc3: string;
+    waveImageSrc: string;
+}
+
+export const HeroSection = (contentOfHeroSection: HeroSectionContent) => {
     return (
         <section className="hero-section">
             <div className="container">

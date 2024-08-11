@@ -31,7 +31,7 @@ export const YourPage1 = () => {
 
             sections.forEach((section) => {
                 if (
-                    scrollPosition >= section.offsetTop 
+                    scrollPosition >= section.offsetTop
                     && scrollPosition < section.offsetTop + section.offsetHeight) {
                     section.classList.add('active');
                 } else {
@@ -82,8 +82,40 @@ export const YourPage1 = () => {
                 cart={{
                     href: '#',
                     quantity: 0
-                }} />
-            {/* <HeroSection/> */}
+                }} 
+            />
+            <HeroSection
+                title='A smart solution for all your social media marketing needs.'
+                subTitle='Plan, engage, and analyse with ease. Transform your social media strategy with an all-in-one platform.'
+                form={
+                    {
+                        placeholder: 'Enter your mail',
+                        srcIcon: '/img/mail.png',
+                        button: {
+                            title: 'Start for free',
+                            callBack: () => { console.log('button ressed') }
+                        }
+                    }
+                }
+                features={
+                    [
+                        {
+                            title: 'Free 14-day Demo'
+                        },
+                        {
+                            title: 'No credit card needed'
+                        },
+                        {
+                            title: 'No Setup'
+                        }
+                    ]
+                }
+                principalImageSrc='./img/laptop.png'
+                socialMediaIconSrc1='./img/laptop-ig.svg'
+                socialMediaIconSrc2='./img/laptop-tt.svg'
+                socialMediaIconSrc3='./img/laptop-fb.svg'
+                waveImageSrc='./img/hero-wave.png'
+            />
             {/* <LogoSection/> */}
             {/* <ProblemSection/> */}
             {/* <CauseSection /> */}
