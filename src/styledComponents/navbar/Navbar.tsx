@@ -1,42 +1,31 @@
 'use client'
 
 import Image from "next/image";
-const contentOfNavbar = {
-    srcLogo: '/img/logo.png',
-    hrefLogo: '#',
-    menuSections: [
-        {
-            href: '#',
-            title: 'Home'
-        },
-        {
-            href: '#',
-            title: 'Pricing'
-        },
-        {
-            href: '#',
-            title: 'Blog'
-        },
-        {
-            href: '#',
-            title: 'Company'
-        },
-        {
-            href: '#',
-            title: 'Resources'
-        },
-    ],
-    principalButton: {
-        title: 'Sign Up',
-        href: '#'
-    },
-    cart: {
-        href: '#',
-        quantity: 0
-    }
+
+interface MenuSection {
+    href: string;
+    title: string;
 }
 
-export const Navbar = () => {
+interface Button {
+    title: string;
+    href: string;
+}
+
+interface Cart {
+    href: string;
+    quantity: number;
+}
+
+interface NavbarContent {
+    srcLogo: string;
+    hrefLogo: string;
+    menuSections: MenuSection[];
+    principalButton: Button;
+    cart: Cart;
+}
+
+export const Navbar = (contentOfNavbar:NavbarContent) => {
     const closeNav = () => {
         const menu = document.getElementById('menu');
         const menuToggle = document.getElementById('menuToggle');

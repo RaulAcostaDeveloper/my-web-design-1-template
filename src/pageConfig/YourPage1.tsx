@@ -15,49 +15,85 @@ import { TestimonialSection } from "@/styledComponents/testimonialSection/Testim
 import { useEffect } from "react";
 import AOS from 'aos';
 // Importa los estilos de AOS
-import 'aos/dist/aos.css';  
+import 'aos/dist/aos.css';
 import '@splidejs/splide/dist/css/splide.min.css';
 
 export const YourPage1 = () => {
-  useEffect(()=>{
-    AOS.init();
-  },[]);
-  useEffect(() => {
-    const handleScroll = (): void => {
-      const sections = document.querySelectorAll<HTMLElement>('section');
-      const scrollPosition = window.scrollY + window.innerHeight / 2;
 
-      sections.forEach((section) => {
-        if (scrollPosition >= section.offsetTop && scrollPosition < section.offsetTop + section.offsetHeight) {
-          section.classList.add('active');
-        } else {
-          section.classList.remove('active');
-        }
-      });
-    };
+    useEffect(() => {
+        AOS.init();
+    }, []);
 
-    window.addEventListener('scroll', handleScroll);
+    useEffect(() => {
+        const handleScroll = (): void => {
+            const sections = document.querySelectorAll<HTMLElement>('section');
+            const scrollPosition = window.scrollY + window.innerHeight / 2;
 
-    // Cleanup function to remove the event listener
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+            sections.forEach((section) => {
+                if (
+                    scrollPosition >= section.offsetTop 
+                    && scrollPosition < section.offsetTop + section.offsetHeight) {
+                    section.classList.add('active');
+                } else {
+                    section.classList.remove('active');
+                }
+            });
+        };
 
-  return (
-    <>
-      <Navbar/>
-      {/* <HeroSection/> */}
-      {/* <LogoSection/> */}
-      {/* <ProblemSection/> */}
-      {/* <CauseSection /> */}
-      {/* <FixProblemSection/> */}
-      {/* <FixProblemInnerSection1/> */}
-      {/* <FixProblemInnerSection2/> */}
-      {/* <TestimonialSection/> */}
-      {/* <BenefitsSection/> */}
-      {/* <ContactSection/> */}
-      {/* <Footer/> */}
-    </>
-  )
+        window.addEventListener('scroll', handleScroll);
+
+        // Cleanup function to remove the event listener
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+    return (
+        <>
+            <Navbar
+                srcLogo="/img/logo.png"
+                hrefLogo="#"
+                menuSections={[
+                    {
+                        href: '#',
+                        title: 'Home'
+                    },
+                    {
+                        href: '#',
+                        title: 'Pricing'
+                    },
+                    {
+                        href: '#',
+                        title: 'Blog'
+                    },
+                    {
+                        href: '#',
+                        title: 'Company'
+                    },
+                    {
+                        href: '#',
+                        title: 'Resources'
+                    },
+                ]}
+                principalButton={{
+                    title: 'Sign Up',
+                    href: '#'
+                }}
+                cart={{
+                    href: '#',
+                    quantity: 0
+                }} />
+            {/* <HeroSection/> */}
+            {/* <LogoSection/> */}
+            {/* <ProblemSection/> */}
+            {/* <CauseSection /> */}
+            {/* <FixProblemSection/> */}
+            {/* <FixProblemInnerSection1/> */}
+            {/* <FixProblemInnerSection2/> */}
+            {/* <TestimonialSection/> */}
+            {/* <BenefitsSection/> */}
+            {/* <ContactSection/> */}
+            {/* <Footer/> */}
+        </>
+    )
 }
