@@ -2,8 +2,68 @@
 import Splide from "@splidejs/splide";
 import Image from "next/image"
 import { useEffect, useRef } from "react";
-
 let renderCounter = 1;
+
+const contentOfTestimonialSection = {
+    slides: [
+        {
+            title: '"A 360 degree view of all my projects."',
+            info: '"SaasBox lets us create a month’s worth of content in one week for our clients, allowing us to spend the rest of the month engaging and optimizing.”',
+            headImgSrc: '/img/quatation-mark.svg',
+            subtitle: 'Sophia Thompson, Founder & CEO, Socially',
+            subtitleImgSrc: '/img/client1.png',
+            subInfo: [
+                {
+                    title: '23%',
+                    info: 'more followers within a month'
+                },
+                {
+                    title: '14X',
+                    info: 'Return on Investment'
+                }
+            ]
+        },
+        {
+            title: '"Helps me stay on top of all marketing."',
+            info: '"With SaasBox, I can have a clear view of all metrics and analytics to make necessary changes in my marketing strategies. I am able to catch up with current trends and manage all our social media channels without too much effort."',
+            headImgSrc: '/img/quatation-mark.svg',
+            subtitle: 'Elle Rabe, co-founder, Falcon',
+            subtitleImgSrc: '/img/client2.png',
+            subInfo: [
+                {
+                    title: '14%',
+                    info: 'more followers within a month'
+                },
+                {
+                    title: '8X',
+                    info: 'Return on Investment'
+                }
+            ]
+        },
+        {
+            title: 'Customer X achieved 14x ROI in the first month !',
+            info: 'Explain how the customer was in a similar situation as your user, struggling with similar problems. Talk about their transition to your product and the outcome: how it solved their problems and helped them achieve their goals.',
+            headImgSrc: '/img/quatation-mark.svg',
+            subtitle: 'Lisa Hayden',
+            subtitleImgSrc: '/img/client3.png',
+            subInfo: [
+                {
+                    title: '23%',
+                    info: 'Primary Result Stat'
+                },
+                {
+                    title: '14X',
+                    info: 'Return on Investment'
+                }
+            ]
+        },
+    ],
+    ornamentImg1Src: '/img/tm-img1.png',
+    ornamentImg2Src: '/img/tm-img2.png',
+    ornamentImg3Src: '/img/tm-img3.png',
+    ornamentImg4Src: '/img/tm-img4.png',
+}
+
 export const TestimonialSection = () => {
     const thisElement = useRef(null);
     useEffect(() => {
@@ -37,96 +97,35 @@ export const TestimonialSection = () => {
                     <div className="splide testimonial-slider">
                         <div className="splide__track">
                             <ul className="splide__list">
-                                <li className="splide__slide is-active">
-                                    <div className="testimonial-card">
-                                        <div className="quat-img img-cd">
-                                            <figure>
-                                                <Image src="/img/quatation-mark.svg" alt="" width={40} height={30} />
-                                            </figure>
-                                        </div>
-                                        <h2>"A 360 degree view of all my projects."</h2>
-                                        <p>"SaasBox lets us create a month’s worth of content in one week for our clients, allowing us to spend the rest of the month engaging and optimizing.”</p>
-                                        <div className="client-wrapper">
-                                            <div className="client-img img-cd">
+                                {contentOfTestimonialSection.slides.map(el => (
+                                    <li className="splide__slide is-active">
+                                        <div className="testimonial-card">
+                                            <div className="quat-img img-cd">
                                                 <figure>
-                                                    <Image src="/img/client1.png" alt="" width={40} height={40} />
+                                                    <Image src={el.headImgSrc} alt="" width={40} height={30} />
                                                 </figure>
                                             </div>
-                                            <h3>Sophia Thompson, Founder & CEO, Socially</h3>
-                                        </div>
-                                        <div className="percentage-wrapper">
-                                            <div className="percentage-card">
-                                                <h4>23%</h4>
-                                                <h5>more followers within a month</h5>
+                                            <h2>{el.title}</h2>
+                                            <p>{el.info}</p>
+                                            <div className="client-wrapper">
+                                                <div className="client-img img-cd">
+                                                    <figure>
+                                                        <Image src={el.subtitleImgSrc} alt="" width={40} height={40} />
+                                                    </figure>
+                                                </div>
+                                                <h3>{el.subtitle}</h3>
                                             </div>
-                                            <div className="percentage-card">
-                                                <h4>14X</h4>
-                                                <h5>Return on Investment</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li className="splide__slide">
-                                    <div className="testimonial-card">
-                                        <div className="quat-img img-cd">
-                                            <figure>
-                                                <Image src="/img/quatation-mark.svg" alt="" width={40} height={30} />
-
-                                            </figure>
-                                        </div>
-                                        <h2>"Helps me stay on top of all marketing."</h2>
-                                        <p>"With SaasBox, I can have a clear view of all metrics and analytics to make necessary changes in my marketing strategies. I am able to catch up with current trends and manage all our social media channels without too much effort."</p>
-                                        <div className="client-wrapper">
-                                            <div className="client-img img-cd">
-                                                <figure>
-                                                    <Image src="/img/client2.png" alt="" width={40} height={40} />
-
-                                                </figure>
-                                            </div>
-                                            <h3>Elle Rabe, co-founder, Falcon</h3>
-                                        </div>
-                                        <div className="percentage-wrapper">
-                                            <div className="percentage-card">
-                                                <h4>14%</h4>
-                                                <h5>more followers within a month</h5>
-                                            </div>
-                                            <div className="percentage-card">
-                                                <h4>8X</h4>
-                                                <h5>Return on Investment</h5>
+                                            <div className="percentage-wrapper">
+                                                {el.subInfo.map(el => (
+                                                    <div className="percentage-card">
+                                                        <h4>{el.title}</h4>
+                                                        <h5>{el.info}</h5>
+                                                    </div>
+                                                ))}
                                             </div>
                                         </div>
-                                    </div>
-                                </li>
-                                <li className="splide__slide">
-                                    <div className="testimonial-card">
-                                        <div className="quat-img img-cd">
-                                            <figure>
-                                                <Image src="/img/quatation-mark.svg" alt="" width={40} height={30} />
-                                            </figure>
-                                        </div>
-                                        <h2>Customer X achieved 14x ROI in the first month !</h2>
-                                        <p>Explain how the customer was in a similar situation as your user, struggling with similar problems. Talk about their transition to your product and the outcome: how it solved their problems and helped them achieve their goals.</p>
-                                        <div className="client-wrapper">
-                                            <div className="client-img img-cd">
-                                                <figure>
-                                                    <Image src="/img/client3.png" alt="" width={40} height={40} />
-
-                                                </figure>
-                                            </div>
-                                            <h3>Lisa Hayden</h3>
-                                        </div>
-                                        <div className="percentage-wrapper">
-                                            <div className="percentage-card">
-                                                <h4>23%</h4>
-                                                <h5>Primary Result Stat</h5>
-                                            </div>
-                                            <div className="percentage-card">
-                                                <h4>14X</h4>
-                                                <h5>Return on Investment</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
+                                    </li>
+                                ))}
                             </ul>
                         </div>
                         <div className="splide__arrows">
@@ -138,26 +137,22 @@ export const TestimonialSection = () => {
             </div>
             <div className="tm-ab-img1 img-cd">
                 <figure>
-                    <Image src="/img/tm-img1.png" alt="" width={60} height={60} />
-
+                    <Image src={contentOfTestimonialSection.ornamentImg1Src} alt="" width={60} height={60} />
                 </figure>
             </div>
             <div className="tm-ab-img2 img-cd">
                 <figure>
-                    <Image src="/img/tm-img2.png" alt="" width={40} height={40} />
-
+                    <Image src={contentOfTestimonialSection.ornamentImg2Src} alt="" width={40} height={40} />
                 </figure>
             </div>
             <div className="tm-ab-img3 img-cd">
                 <figure>
-                    <Image src="/img/tm-img3.png" alt="" width={60} height={60} />
-
+                    <Image src={contentOfTestimonialSection.ornamentImg3Src} alt="" width={60} height={60} />
                 </figure>
             </div>
             <div className="tm-ab-img4 img-cd">
                 <figure>
-                    <Image src="/img/tm-img4.png" alt="" width={60} height={60} />
-
+                    <Image src={contentOfTestimonialSection.ornamentImg4Src} alt="" width={60} height={60} />
                 </figure>
             </div>
             <div className="bg-gradient tm-g1 img-cd">
