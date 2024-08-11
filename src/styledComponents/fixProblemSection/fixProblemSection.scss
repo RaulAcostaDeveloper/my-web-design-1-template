@@ -1,0 +1,24 @@
+.fix-problem-section {
+    padding: 60px 0 40px 0;
+    position: relative;
+    width: 100%;
+
+    .fix-problem-content {
+        max-width: 780px;
+        margin: 0 auto;
+        padding: 60px 0 40px 0;
+
+        h2 {
+            color: $color-one;
+            text-align: center;
+            font-size: 48px;
+            line-height: 56px;
+        }
+    }
+}
+
+@include medium {
+    .fix-problem-section .fix-problem-content h2 {
+        width: 100%;
+    }
+}

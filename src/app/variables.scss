@@ -1,0 +1,35 @@
+$color-one: #282876;
+$color-two: #216fed;
+$color-three: #8181ac;
+$color-four: #ffffff;
+$font-one: "Inter", sans-serif;
+
+@mixin small {
+    @media screen and (max-width: 345px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (max-width:768px) {
+        @content;
+    }
+}
+
+@mixin medium {
+    @media screen and (max-width:991px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: 1280px) {
+        @content;
+    }
+}
+
+@mixin large-desktop {
+    @media screen and (min-width: 1440px) {
+        @content;
+    }
+}

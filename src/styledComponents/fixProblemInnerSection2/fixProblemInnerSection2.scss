@@ -1,0 +1,45 @@
+.fix-problem-inner-section2 {
+    padding: 100px 0;
+    position: relative;
+    width: 100%;
+
+    h2 {
+        margin-bottom: 25px;
+    }
+
+    .problem-inner1-right {
+        padding-right: 130px;
+
+        .problem-manage-card {
+            gap: 20px !important;
+
+            .problem-manage-txt p {
+                width: 100% !important;
+            }
+
+            img {
+                width: 24px !important;
+            }
+        }
+    }
+
+    .wave-2 {
+        left: auto;
+        top: 12%;
+        right: -9%;
+        bottom: 0%;
+        width: 50%;
+    }
+}
+
+.fix-problem-inner-section2.active .wave-img {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+}
+
+@include medium {
+    .fix-problem-inner-section2 .fix-problem-inner1 {
+        flex-direction: column-reverse;
+    }
+}

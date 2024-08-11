@@ -1,0 +1,119 @@
+.fix-problem-inner-section1 {
+    position: relative;
+    padding: 90px 0 100px 0;
+    width: 100%;
+
+    .wave-1 {
+        left: -7%;
+        top: 0%;
+        right: auto;
+        bottom: 0%;
+        width: 55%;
+        max-width: 991px;
+    }
+}
+
+// It applys for both inner section 1 and 2
+.fix-problem-inner1 {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+
+    .problem-inner1-left,
+    .problem-inner1-right {
+        width: 50%;
+
+        h2 {
+            color: $color-one;
+            font-size: 38px;
+        }
+
+        .problem-manage-wrap {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+
+            .problem-manage-card {
+                display: flex;
+                align-items: start;
+                gap: 40px;
+
+                .problem-manage-img {
+
+                    img {
+                        width: 48px;
+                        object-fit: contain;
+                    }
+                }
+
+                .problem-manage-txt h3 {
+                    font-size: 18px;
+                    color: $color-one;
+                }
+
+                .problem-manage-txt p {
+                    width: 80%;
+                }
+            }
+        }
+    }
+}
+
+.fix-problem-inner-section1.active .wave-img {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+}
+
+@include tablet {
+    .fix-problem-inner-section1 {
+        padding: 60px 0 100px 0;
+
+        .wave-1 {
+            top: 0%;
+            bottom: auto;
+        }
+
+        .problem-inner1-left,
+        .problem-inner1-right {
+            width: 100%;
+
+            .problem-manage-card {
+                flex-direction: column;
+                gap: 20px !important;
+            }
+        }
+
+        .fix-problem-section .fix-problem-content {
+            padding: 0;
+        }
+    }
+
+    .fix-problem-inner1 .problem-inner1-left,
+    .fix-problem-inner1 .problem-inner1-right {
+        width: 100%;
+        padding: 0;
+    }
+
+    .fix-problem-inner1 .problem-inner1-left .problem-manage-wrap,
+    .fix-problem-inner1 .problem-inner1-right .problem-manage-wrap {
+        gap: 15px;
+    }
+}
+
+@include medium {
+    .fix-problem-inner1 {
+        flex-direction: column;
+    }
+
+    .fix-problem-inner1 .problem-inner1-left,
+    .fix-problem-inner1 .problem-inner1-right {
+        width: 80%;
+    }
+
+    .fix-problem-inner1 .problem-inner1-left h2,
+    .fix-problem-inner1 .problem-inner1-right h2 {
+        width: 100%;
+    }
+}
