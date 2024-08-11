@@ -50,8 +50,8 @@ export default function Home() {
 
   return (
     <>
-      {/* <Navbar/>
-      <HeroSection/> */}
+      {/* <Navbar/> */}
+      {/* <HeroSection/> */}
       {/* <LogoSection/> */}
       {/* <ProblemSection/> */}
       {/* <CauseSection /> */}
@@ -59,8 +59,8 @@ export default function Home() {
       {/* <FixProblemInnerSection1/> */}
       {/* <FixProblemInnerSection2/> */}
       {/* <TestimonialSection/> */}
-      <BenefitsSection/>
-      {/* <ContactSection/> */}
+      {/* <BenefitsSection/> */}
+      <ContactSection/>
       {/* <Footer/> */}
     </>
   )
