@@ -55,8 +55,8 @@ export default function Home() {
       <HeroSection/> */}
       {/* <LogoSection/> */}
       {/* <ProblemSection/> */}
-      <CauseSection />
-      {/* <FixProblemSection/> */}
+      {/* <CauseSection /> */}
+      <FixProblemSection/>
       {/* <FixProblemInnerSection1/> */}
       {/* <FixProblemInnerSection2/> */}
       {/* <TestimonialSection/> */}
