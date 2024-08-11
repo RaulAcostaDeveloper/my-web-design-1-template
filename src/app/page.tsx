@@ -56,8 +56,8 @@ export default function Home() {
       {/* <ProblemSection/> */}
       {/* <CauseSection /> */}
       {/* <FixProblemSection/> */}
-      <FixProblemInnerSection1/>
-      {/* <FixProblemInnerSection2/> */}
+      {/* <FixProblemInnerSection1/> */}
+      <FixProblemInnerSection2/>
       {/* <TestimonialSection/> */}
       {/* <BenefitsSection/> */}
       {/* <ContactSection/> */}
