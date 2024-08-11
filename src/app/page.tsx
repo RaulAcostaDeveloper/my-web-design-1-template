@@ -60,8 +60,8 @@ export default function Home() {
       {/* <FixProblemInnerSection2/> */}
       {/* <TestimonialSection/> */}
       {/* <BenefitsSection/> */}
-      <ContactSection/>
-      {/* <Footer/> */}
+      {/* <ContactSection/> */}
+      <Footer/>
     </>
   )
 }

@@ -1,5 +1,125 @@
 import Image from "next/image"
 
+const contentOfFooter = {
+    srcLogo: '/img/logo.png',
+    mailOfContact: 'hello@saasbox.com',
+    numberOfContact: '+99-565-654',
+    numberForHref: '+99565654',
+    socialMedia: [
+        {
+            imgSrc: '/img/fb.svg',
+            href: '#'
+        },
+        {
+            imgSrc: '/img/twitter.svg',
+            href: '#'
+        },
+        {
+            imgSrc: '/img/linkedin.svg',
+            href: '#'
+        },
+        {
+            imgSrc: '/img/ig.svg',
+            href: '#'
+        },
+    ],
+    footerLinks: [
+        {
+            title: 'Links',
+            pages: [
+                {
+                    title: 'Home',
+                    href: '#'
+                },
+                {
+                    title: 'Pricing',
+                    href: '#'
+                },
+                {
+                    title: 'Blog',
+                    href: '#'
+                },
+                {
+                    title: 'Company',
+                    href: '#'
+                },
+                {
+                    title: 'Resources',
+                    href: '#'
+                },
+            ]
+        },
+        {
+            title: 'Others',
+            pages: [
+                {
+                    title: 'Downloads',
+                    href: '#'
+                },
+                {
+                    title: 'Book A Demo',
+                    href: '#'
+                },
+                {
+                    title: 'Terms & Conditions',
+                    href: '#'
+                },
+            ]
+        },
+        {
+            title: 'Others',
+            pages: [
+                {
+                    title: 'Sign Up',
+                    href: '#'
+                },
+                {
+                    title: 'Log In',
+                    href: '#'
+                },
+                {
+                    title: 'Passowrd',
+                    href: '#'
+                },
+                {
+                    title: '404',
+                    href: '#'
+                },
+            ]
+        },
+    ],
+    copyright: {
+        title: '© All rights reserved.',
+        propietario: {
+            title: 'Conversion Flow',
+            href: '#'
+        },
+        platform: {
+            title: ' Webflow.',
+            href: '#'
+        }
+
+    },
+    moreLinks: [
+        {
+            title: 'Style Guide',
+            href: '#'
+        },
+        {
+            title: 'Licence',
+            href: '#'
+        },
+        {
+            title: 'Instructions',
+            href: '#'
+        },
+        {
+            title: 'Changelog',
+            href: '#'
+        },
+    ]
+}
+
 export const Footer = () => {
     return (
         <footer data-aos="fade-up">
@@ -9,70 +129,53 @@ export const Footer = () => {
                         <div className="footer-logo">
                             <a href="#" className="img-cd">
                                 <figure>
-                                    <Image src="/img/logo.png" alt="" width={200} height={50} />
+                                    <Image src={contentOfFooter.srcLogo} alt="" width={200} height={50} />
                                 </figure>
                             </a>
                         </div>
-                        <a href="mailto:hello@saasbox.com" className="email-link">hello@saasbox.com</a>
-                        <a href="tel:+99565654" className="tel-link">+99-565-654</a>
+                        {/* Nota. No recomiendo el uso de mailto: para este caso. Deberían realizar una función callback. */}
+                        <a href={`mailto:${contentOfFooter.mailOfContact}`} className="email-link">{contentOfFooter.mailOfContact}</a>
+                        <a href={`tel:${contentOfFooter.numberForHref}`} className="tel-link">{contentOfFooter.numberOfContact}</a>
                         <div className="social-wrapper">
-                            <div className="social-icon img-cd">
-                                <figure>
-                                    <Image src="/img/fb.svg" alt="" width={24} height={24} />
-                                </figure>
-                            </div>
-                            <div className="social-icon img-cd">
-                                <figure>
-                                    <Image src="/img/twitter.svg" alt="" width={24} height={24} />
-                                </figure>
-                            </div>
-                            <div className="social-icon img-cd">
-                                <figure>
-                                    <Image src="/img/linkedin.svg" alt="" width={24} height={24} />
-                                </figure>
-                            </div>
-                            <div className="social-icon img-cd">
-                                <figure>
-                                    <Image src="/img/ig.svg" alt="" width={24} height={24} />
-                                </figure>
-                            </div>
+                            {contentOfFooter.socialMedia.map((el, index) => (
+                                <div className="social-icon img-cd" key={el.href + index}>
+                                    <a href={el.href} target="_blank">
+                                        <figure>
+                                            <Image src={el.imgSrc} alt="" width={24} height={24} />
+                                        </figure>
+                                    </a>
+                                </div>
+                            ))}
                         </div>
                     </div>
                     <div className="footer-right">
                         <div className="footer-grid">
-                            <div className="footer-links">
-                                <h4>Links</h4>
-                                <a href="#">Home</a>
-                                <a href="#">Pricing</a>
-                                <a href="#">Blog</a>
-                                <a href="#">Company</a>
-                                <a href="#">Resources</a>
-                            </div>
-                            <div className="footer-links">
-                                <h4>Others</h4>
-                                <a href="#">Downloads</a>
-                                <a href="#">Book A Demo</a>
-                                <a href="#">Terms & Conditions</a>
-                            </div>
-                            <div className="footer-links">
-                                <h4>Others</h4>
-                                <a href="#">Sign Up</a>
-                                <a href="#">Log In</a>
-                                <a href="#">Passowrd</a>
-                                <a href="#">404</a>
-                            </div>
+                            {contentOfFooter.footerLinks.map((el, index) => (
+                                <div key={el.title + index} className="footer-links">
+                                    <h4>{el.title}</h4>
+                                    {el.pages.map((page, index) => (
+                                        <a key={page.href + index} href={page.href}>{page.title}</a>
+                                    ))}
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>
                 <div className="footer-copyright">
                     <div className="copyright-left">
-                        <p>© All rights reserved. <a href="#">Conversion Flow</a>, Inc. Powered by <a href="#">Webflow.</a></p>
+                        <p>{contentOfFooter.copyright.title} 
+                            <a href={contentOfFooter.copyright.propietario.href}>
+                                {contentOfFooter.copyright.propietario.title}</a>
+                            , Inc. Powered by 
+                            <a href={contentOfFooter.copyright.platform.href}>
+                                {contentOfFooter.copyright.platform.title}
+                                </a>
+                        </p>
                     </div>
                     <div className="copyright-right">
-                        <a href="#">Style Guide</a>
-                        <a href="#">Licence</a>
-                        <a href="#">Instructions</a>
-                        <a href="#">Changelog</a>
+                        {contentOfFooter.moreLinks.map((el, index) =>(
+                            <a key={el.title + index} href={el.href}>{el.title}</a>
+                        ))}
                     </div>
                 </div>
             </div>
