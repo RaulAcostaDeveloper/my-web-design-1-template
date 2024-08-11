@@ -48,11 +48,11 @@ export const HeroSection = () => {
                         </form>
                     </div>
                     <div className="hero-features-wrap" data-aos="fade-up">
-                        {contentOfHeroSection.features.map(el => (
-                            <div className="hero-feature-card" key={el.title}>
+                        {contentOfHeroSection.features.map( (el, index) => (
+                            <div className="hero-feature-card" key={el.title + index}>
                                 <div className="check-icon img-cd">
                                     <figure>
-                                        <Image src="/img/check-icon.svg" alt="" width={15} height={15} />
+                                        <Image src="/img/check-icon.svg" alt="check icon" width={15} height={15} />
                                     </figure>
                                 </div>
                                 <p>{el.title}</p>
@@ -63,44 +63,44 @@ export const HeroSection = () => {
                 <div className="laptop-wrapper" data-aos="fade-up">
                     <div className="laptop img-cd">
                         <figure>
-                            <img src={contentOfHeroSection.principalImageSrc} alt="" />
+                            <img src={contentOfHeroSection.principalImageSrc} alt="principal image for this section" />
                         </figure>
                     </div>
                     <div className="laptop-ig img-cd">
                         <figure>
-                            <img src={contentOfHeroSection.socialMediaIconSrc1} alt="" />
+                            <img src={contentOfHeroSection.socialMediaIconSrc1} alt="social media icon" />
                         </figure>
                     </div>
                     <div className="laptop-tt img-cd">
                         <figure>
-                            <img src={contentOfHeroSection.socialMediaIconSrc2} alt="" />
+                            <img src={contentOfHeroSection.socialMediaIconSrc2} alt="social media icon" />
                         </figure>
                     </div>
                     <div className="laptop-fb img-cd">
                         <figure>
-                            <img src={contentOfHeroSection.socialMediaIconSrc3} alt="" />
+                            <img src={contentOfHeroSection.socialMediaIconSrc3} alt="social media icon" />
                         </figure>
                     </div>
                 </div>
                 <div className="bg-gradient hero-g1 img-cd">
                     <figure>
-                        <img src="./img/hero-g1.png" alt="" />
+                        <img src="./img/hero-g1.png" alt="shadow" />
                     </figure>
                 </div>
                 <div className="bg-gradient hero-g2 img-cd">
                     <figure>
-                        <img src="./img/hero-g2.png" alt="" />
+                        <img src="./img/hero-g2.png" alt="shadow" />
                     </figure>
                 </div>
                 <div className="bg-gradient hero-g3 img-cd">
                     <figure>
-                        <img src="./img/hero-g3.png" alt="" />
+                        <img src="./img/hero-g3.png" alt="shadow" />
                     </figure>
                 </div>
             </div>
             <div className="bg-wave hero-wave-1 img-cd">
                 <figure>
-                    <img src={contentOfHeroSection.waveImageSrc} alt="" />
+                    <img src={contentOfHeroSection.waveImageSrc} alt="wave ornament" />
                 </figure>
             </div>
         </section>

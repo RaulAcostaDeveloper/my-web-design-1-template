@@ -59,7 +59,7 @@ export const CauseSection = () => {
                     <div className="splide__track">
                         <ul className="splide__list">
                             {contentOfCauseSection.splideElements.map((el, index) => (
-                                <li className={`splide__slide`} key={index}>
+                                <li className={`splide__slide`} key={el.title + index}>
                                     <div className="cause-card">
                                         <div className="cause-txt">
                                             <h2>{el.title}</h2>
@@ -67,7 +67,7 @@ export const CauseSection = () => {
                                         </div>
                                         <div className="cause-img img-cd">
                                             <figure>
-                                                <Image src={el.srcImg} alt="" width={500} height={500} />
+                                                <Image src={el.srcImg} alt="cause img in splide" width={500} height={500} />
                                             </figure>
                                         </div>
                                     </div>
@@ -82,12 +82,12 @@ export const CauseSection = () => {
                 </div>
                 <div className="bg-gradient cause-g1 img-cd">
                     <figure>
-                        <Image src="/img/cause-g1.png" alt="" width={1200} height={1200} />
+                        <Image src="/img/cause-g1.png" alt="shadow" width={1200} height={1200} />
                     </figure>
                 </div>
                 <div className="bg-gradient cause-g2 img-cd">
                     <figure>
-                        <Image src="/img/cause-g2.png" alt="" width={1200} height={1200} />
+                        <Image src="/img/cause-g2.png" alt="shadow" width={1200} height={1200} />
                     </figure>
                 </div>
             </div>

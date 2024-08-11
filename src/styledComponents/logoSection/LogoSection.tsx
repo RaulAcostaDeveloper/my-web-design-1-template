@@ -23,10 +23,10 @@ export const LogoSection = () => {
         <section className="logo-section" data-aos="fade-up">
             <div className="container">
                 <div className="logo-wrapper">
-                    {contentOfLogoSection.map(el => (
-                        <div className="logo-card img-cd">
+                    {contentOfLogoSection.map( (el, index) => (
+                        <div className="logo-card img-cd" key={el.srcImage + index}>
                             <figure>
-                                <Image src={el.srcImage} alt="" width={200} height={200} />
+                                <Image src={el.srcImage} alt="logo of a company" width={200} height={200} />
                             </figure>
                         </div>
                     ))}

@@ -3,6 +3,7 @@
 import Image from "next/image";
 const contentOfNavbar = {
     srcLogo: '/img/logo.png',
+    hrefLogo: '#',
     menuSections: [
         {
             href: '#',
@@ -74,15 +75,15 @@ export const Navbar = () => {
             <div className="container">
                 <div className="nav">
                     <div id="logo">
-                        <a href="./index.html" className="img-cd">
+                        <a href={contentOfNavbar.hrefLogo} className="img-cd">
                             <figure>
                                 <Image src={contentOfNavbar.srcLogo} alt="logo" width={100} height={100} />
                             </figure>
                         </a>
                     </div>
                     <div id="menu">
-                        {contentOfNavbar?.menuSections.map(el => (
-                            <a key={el.title} href={el.href} onClick={closeNav}>{el.title}</a>
+                        {contentOfNavbar?.menuSections.map( (el, index) => (
+                            <a key={el.title + index} href={el.href} onClick={closeNav}>{el.title}</a>
                         ))}
                         <div className="menu-btn mob">
                             <a href={contentOfNavbar.principalButton.href}>{contentOfNavbar.principalButton.title}</a>

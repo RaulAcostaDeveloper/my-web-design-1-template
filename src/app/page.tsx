@@ -51,14 +51,14 @@ export default function Home() {
   return (
     <>
       {/* <Navbar/> */}
-      {/* <HeroSection/> */}
-      {/* <LogoSection/> */}
+      <HeroSection/>
+      <LogoSection/>
       {/* <ProblemSection/> */}
       {/* <CauseSection /> */}
       {/* <FixProblemSection/> */}
-      {/* <FixProblemInnerSection1/> */}
-      {/* <FixProblemInnerSection2/> */}
-      {/* <TestimonialSection/> */}
+      <FixProblemInnerSection1/>
+      <FixProblemInnerSection2/>
+      <TestimonialSection/>
       {/* <BenefitsSection/> */}
       {/* <ContactSection/> */}
       <Footer/>

@@ -37,37 +37,37 @@ export const ContactSection = () => {
             </div>
             <div className="bg-wave contact-wave img-cd">
                 <figure>
-                    <Image className="wave-img" src="/img/contact-wave.png" alt="" width={1200} height={300} />
+                    <Image className="wave-img" src="/img/contact-wave.png" alt="shadow" width={1200} height={300} />
                 </figure>
             </div>
             <div className="bg-gradient img-cd contact-bg1">
                 <figure>
-                    <Image src="/img/contact-bg1.png" alt="" width={1200} height={1200} />
+                    <Image src="/img/contact-bg1.png" alt="shadow" width={1200} height={1200} />
                 </figure>
             </div>
             <div className="bg-gradient img-cd contact-bg2">
                 <figure>
-                    <Image src="/img/contact-bg2.png" alt="" width={1200} height={1200} />
+                    <Image src="/img/contact-bg2.png" alt="shadow" width={1200} height={1200} />
                 </figure>
             </div>
             <div className="contact-pro1 img-cd email-img1">
                 <figure>
-                    <Image src={contentOfContactSection.ornamentImg1Src} alt="" width={60} height={60} />
+                    <Image src={contentOfContactSection.ornamentImg1Src} alt="Ornament" width={60} height={60} />
                 </figure>
             </div>
             <div className="contact-pro1 img-cd email-img2">
                 <figure>
-                    <Image src={contentOfContactSection.ornamentImg2Src} alt="" width={60} height={60} />
+                    <Image src={contentOfContactSection.ornamentImg2Src} alt="Ornament" width={60} height={60} />
                 </figure>
             </div>
             <div className="contact-pro1 img-cd email-img3">
                 <figure>
-                    <Image src={contentOfContactSection.ornamentImg3Src} alt="" width={60} height={60} />
+                    <Image src={contentOfContactSection.ornamentImg3Src} alt="Ornament" width={60} height={60} />
                 </figure>
             </div>
             <div className="contact-pro1 img-cd email-img4">
                 <figure>
-                    <Image src={contentOfContactSection.ornamentImg4Src} alt="" width={60} height={60} />
+                    <Image src={contentOfContactSection.ornamentImg4Src} alt="Ornament" width={60} height={60} />
                 </figure>
             </div>
         </section>

@@ -97,12 +97,12 @@ export const TestimonialSection = () => {
                     <div className="splide testimonial-slider">
                         <div className="splide__track">
                             <ul className="splide__list">
-                                {contentOfTestimonialSection.slides.map(el => (
-                                    <li className="splide__slide is-active">
+                                {contentOfTestimonialSection.slides.map((el, index) => (
+                                    <li className="splide__slide is-active" key={el.title + index}>
                                         <div className="testimonial-card">
                                             <div className="quat-img img-cd">
                                                 <figure>
-                                                    <Image src={el.headImgSrc} alt="" width={40} height={30} />
+                                                    <Image src={el.headImgSrc} alt="icon" width={40} height={30} />
                                                 </figure>
                                             </div>
                                             <h2>{el.title}</h2>
@@ -110,14 +110,14 @@ export const TestimonialSection = () => {
                                             <div className="client-wrapper">
                                                 <div className="client-img img-cd">
                                                     <figure>
-                                                        <Image src={el.subtitleImgSrc} alt="" width={40} height={40} />
+                                                        <Image src={el.subtitleImgSrc} alt="icon" width={40} height={40} />
                                                     </figure>
                                                 </div>
                                                 <h3>{el.subtitle}</h3>
                                             </div>
                                             <div className="percentage-wrapper">
-                                                {el.subInfo.map(el => (
-                                                    <div className="percentage-card">
+                                                {el.subInfo.map((el, index) => (
+                                                    <div className="percentage-card" key={el.title + index}>
                                                         <h4>{el.title}</h4>
                                                         <h5>{el.info}</h5>
                                                     </div>
@@ -137,27 +137,27 @@ export const TestimonialSection = () => {
             </div>
             <div className="tm-ab-img1 img-cd">
                 <figure>
-                    <Image src={contentOfTestimonialSection.ornamentImg1Src} alt="" width={60} height={60} />
+                    <Image src={contentOfTestimonialSection.ornamentImg1Src} alt="ornament icon" width={60} height={60} />
                 </figure>
             </div>
             <div className="tm-ab-img2 img-cd">
                 <figure>
-                    <Image src={contentOfTestimonialSection.ornamentImg2Src} alt="" width={40} height={40} />
+                    <Image src={contentOfTestimonialSection.ornamentImg2Src} alt="ornament icon" width={40} height={40} />
                 </figure>
             </div>
             <div className="tm-ab-img3 img-cd">
                 <figure>
-                    <Image src={contentOfTestimonialSection.ornamentImg3Src} alt="" width={60} height={60} />
+                    <Image src={contentOfTestimonialSection.ornamentImg3Src} alt="ornament icon" width={60} height={60} />
                 </figure>
             </div>
             <div className="tm-ab-img4 img-cd">
                 <figure>
-                    <Image src={contentOfTestimonialSection.ornamentImg4Src} alt="" width={60} height={60} />
+                    <Image src={contentOfTestimonialSection.ornamentImg4Src} alt="ornament icon" width={60} height={60} />
                 </figure>
             </div>
             <div className="bg-gradient tm-g1 img-cd">
                 <figure>
-                    <Image src="/img/bg-gradient-tm.png" alt="" width={1200} height={1200} />
+                    <Image src="/img/bg-gradient-tm.png" alt="ornament icon" width={1200} height={1200} />
                 </figure>
             </div>
         </section>

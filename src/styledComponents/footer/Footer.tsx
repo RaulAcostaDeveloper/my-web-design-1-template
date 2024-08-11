@@ -2,6 +2,7 @@ import Image from "next/image"
 
 const contentOfFooter = {
     srcLogo: '/img/logo.png',
+    hrefLogo: '#',
     mailOfContact: 'hello@saasbox.com',
     numberOfContact: '+99-565-654',
     numberForHref: '+99565654',
@@ -127,9 +128,9 @@ export const Footer = () => {
                 <div className="footer-content">
                     <div className="footer-left">
                         <div className="footer-logo">
-                            <a href="#" className="img-cd">
+                            <a href={contentOfFooter.hrefLogo} className="img-cd">
                                 <figure>
-                                    <Image src={contentOfFooter.srcLogo} alt="" width={200} height={50} />
+                                    <Image src={contentOfFooter.srcLogo} alt="logo of the company" width={200} height={50} />
                                 </figure>
                             </a>
                         </div>
@@ -141,7 +142,7 @@ export const Footer = () => {
                                 <div className="social-icon img-cd" key={el.href + index}>
                                     <a href={el.href} target="_blank">
                                         <figure>
-                                            <Image src={el.imgSrc} alt="" width={24} height={24} />
+                                            <Image src={el.imgSrc} alt="social media icon" width={24} height={24} />
                                         </figure>
                                     </a>
                                 </div>

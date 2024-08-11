@@ -32,11 +32,11 @@ export const BenefitsSection = () => {
             <div className="container">
                 <h2 data-aos="fade-up">{contentOfBenefitsSection.title}</h2>
                 <div className="benefits-wrapper" data-aos="fade-up">
-                    {contentOfBenefitsSection.cards.map(el => (
-                        <article className="benefits-card">
+                    {contentOfBenefitsSection.cards.map( (el, index) => (
+                        <article className="benefits-card" key={el.cardImgSrc + index}>
                             <div className="benefits-img img-cd">
                                 <figure>
-                                    <Image src={el.cardImgSrc} alt="" width={70} height={70} />
+                                    <Image src={el.cardImgSrc} alt="Icon" width={70} height={70} />
                                 </figure>
                             </div>
                             <div className="benefits-txt">
@@ -49,17 +49,17 @@ export const BenefitsSection = () => {
             </div>
             <div className="bg-gradient img-cd benefits-g1">
                 <figure>
-                    <Image src="/img/benefits-g1.png" alt="" width={1200} height={1200} />
+                    <Image src="/img/benefits-g1.png" alt="shadow" width={1200} height={1200} />
                 </figure>
             </div>
             <div className="bg-gradient img-cd benefits-g2">
                 <figure>
-                    <Image src="/img/benefits-g2.png" alt="" width={1300} height={1300} />
+                    <Image src="/img/benefits-g2.png" alt="shadow" width={1300} height={1300} />
                 </figure>
             </div>
             <div className="bg-gradient img-cd benefits-g3">
                 <figure>
-                    <Image src="/img/benefits-g3.png" alt="" width={800} height={800} />
+                    <Image src="/img/benefits-g3.png" alt="shadow" width={800} height={800} />
                 </figure>
             </div>
         </section>

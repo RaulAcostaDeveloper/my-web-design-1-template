@@ -28,18 +28,18 @@ export const FixProblemInnerSection1 = () => {
                     <div className="problem-inner1-left">
                         <div className="problem-inner-img img-cd">
                             <figure>
-                                <Image src={contentOfFixProblemInnerSection1.problemInnerImgSrc} alt="" width={600} height={600} />
+                                <Image src={contentOfFixProblemInnerSection1.problemInnerImgSrc} alt="left side image" width={600} height={600} />
                             </figure>
                         </div>
                     </div>
                     <div className="problem-inner1-right">
                         <h2>{contentOfFixProblemInnerSection1.title}</h2>
                         <div className="problem-manage-wrap">
-                            {contentOfFixProblemInnerSection1.cards.map(el => (
-                                <article className="problem-manage-card">
+                            {contentOfFixProblemInnerSection1.cards.map( (el, index) => (
+                                <article className="problem-manage-card" key={ el.title + index}>
                                     <div className="problem-manage-img img-cd">
                                         <figure>
-                                            <Image src={el.srcImage} alt="" width={50} height={50} />
+                                            <Image src={el.srcImage} alt="icon for this card" width={50} height={50} />
                                         </figure>
                                     </div>
                                     <div className="problem-manage-txt">
@@ -54,7 +54,7 @@ export const FixProblemInnerSection1 = () => {
             </div>
             <div className="bg-wave wave-1 img-cd">
                 <figure>
-                    <Image className="wave-img" src="/img/problem-wave.png" alt="" width={700} height={600} />
+                    <Image className="wave-img" src="/img/problem-wave.png" alt="ornament wave" width={700} height={600} />
                 </figure>
             </div>
         </section>
