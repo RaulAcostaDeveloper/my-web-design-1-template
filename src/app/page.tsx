@@ -51,9 +51,9 @@ export default function Home() {
 
   return (
     <>
-      <Navbar/>
-      <HeroSection/>
-      {/* <LogoSection/> */}
+      {/* <Navbar/>
+      <HeroSection/> */}
+      <LogoSection/>
       {/* <ProblemSection/> */}
       {/* <CauseSection /> */}
       {/* <FixProblemSection/> */}
