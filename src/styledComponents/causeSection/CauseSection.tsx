@@ -4,27 +4,17 @@ import Image from "next/image"
 import { useEffect, useRef } from "react";
 let renderCounter = 1;
 
-const contentOfCauseSection = {
-    splideElements: [
-        {
-            title: 'Excel sheets and google docs are just silos of data.',
-            subtitle: 'Manually creating reports that just sit on your computer isn\'t going to work anymore. Get complete oversight of all connected social profiles from a single platform.',
-            srcImg: '/img/cause1.png',
-        },
-        {
-            title: 'Give Context. What is the cause of this problem?',
-            subtitle: 'Talk about the things that cause this problem. This shows the user that you actually understand the problem and empathize with them about their situation.',
-            srcImg: '/img/cause2.png',
-        },
-        {
-            title: 'Give Context. What is the cause of this problem?',
-            subtitle: 'Talk about the things that cause this problem. This shows the user that you actually understand the problem and empathize with them about their situation.',
-            srcImg: '/img/cause3.png',
-        }
-    ]
+interface SplideElement {
+    title: string;
+    subtitle: string;
+    srcImg: string;
 }
 
-export const CauseSection = () => {
+interface props {
+    splideElements: SplideElement[];
+}
+
+export const CauseSection = (contentOfCauseSection: props) => {
     const thisElement = useRef(null);
     useEffect(() => {
         if (thisElement.current) {

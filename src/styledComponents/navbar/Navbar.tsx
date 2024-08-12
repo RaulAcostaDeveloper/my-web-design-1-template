@@ -17,7 +17,7 @@ interface Cart {
     quantity: number;
 }
 
-interface NavbarContent {
+interface props {
     srcLogo: string;
     hrefLogo: string;
     menuSections: MenuSection[];
@@ -25,7 +25,7 @@ interface NavbarContent {
     cart: Cart;
 }
 
-export const Navbar = (contentOfNavbar:NavbarContent) => {
+export const Navbar = (contentOfNavbar: props) => {
     const closeNav = () => {
         const menu = document.getElementById('menu');
         const menuToggle = document.getElementById('menuToggle');

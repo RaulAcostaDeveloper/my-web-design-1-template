@@ -15,7 +15,28 @@ const contentOfContactSection = {
     ornamentImg3Src: '/img/tm-img3.png',
     ornamentImg4Src: '/img/tm-img4.png',
 }
-export const ContactSection = () => {
+interface Button {
+    title: string;
+    callBack: () => void;
+}
+
+interface Form {
+    placeholder: string;
+    srcIcon: string;
+    button: Button;
+}
+
+interface ContactSectionContent {
+    title: string;
+    subtitle: string;
+    form: Form;
+    ornamentImg1Src: string;
+    ornamentImg2Src: string;
+    ornamentImg3Src: string;
+    ornamentImg4Src: string;
+}
+
+export const ContactSection = (contentOfContactSection: ContactSectionContent) => {
     return (
         <section className="contact-section" data-aos="fade-up">
             <div className="container">

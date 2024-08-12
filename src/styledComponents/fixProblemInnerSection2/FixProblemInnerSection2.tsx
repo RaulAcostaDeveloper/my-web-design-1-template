@@ -1,22 +1,18 @@
 import Image from "next/image"
 
-const contentOfFixProblemInnerSection2 = {
-    title: 'Good strategy only comes from reliable data.',
-    subtitle: 'Get instant recommendations on SEO, content marketing and advertising with auto-generated, detailed reports. Boost your online visibility within days.',
-    cards: [
-        {
-            info: 'No more juggling between 8 different tools',
-            srcImage: '/img/problem-tick.svg'
-        },
-        {
-            info: 'Draft, schedule and post content with a single software',
-            srcImage: '/img/problem-tick.svg'
-        }
-    ],
-    leftImgSrc: '/img/problem-inner2-img.png'
+interface Card {
+    info: string;
+    srcImage: string;
 }
 
-export const FixProblemInnerSection2 = () => {
+interface FixProblemInnerSectionContent {
+    title: string;
+    subtitle: string;
+    cards: Card[];
+    leftImgSrc: string;
+}
+
+export const FixProblemInnerSection2 = (contentOfFixProblemInnerSection2: FixProblemInnerSectionContent) => {
     return (
         <section className="fix-problem-inner-section2" data-aos="fade-up">
             <div className="container">

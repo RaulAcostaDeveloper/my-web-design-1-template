@@ -1,7 +1,11 @@
 const contentOfFixProblemSection = {
     title: 'Devise the best social media marketing strategy with one centralized, robust solution.'
 }
-export const FixProblemSection = () => {
+
+interface props {
+    title: string
+}
+export const FixProblemSection = (contentOfFixProblemSection: props) => {
     return (
         <section className="fix-problem-section" data-aos="fade-up">
             <div className="container">

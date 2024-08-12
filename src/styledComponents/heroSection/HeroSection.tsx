@@ -15,7 +15,7 @@ interface Feature {
     title: string;
 }
 
-interface HeroSectionContent {
+interface props {
     title: string;
     subTitle: string;
     form: Form;
@@ -27,7 +27,7 @@ interface HeroSectionContent {
     waveImageSrc: string;
 }
 
-export const HeroSection = (contentOfHeroSection: HeroSectionContent) => {
+export const HeroSection = (contentOfHeroSection: props) => {
     return (
         <section className="hero-section">
             <div className="container">

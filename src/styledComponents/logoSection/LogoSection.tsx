@@ -18,12 +18,18 @@ const contentOfLogoSection = [
     },
 ]
 
-export const LogoSection = () => {
+interface Logo {
+    srcImage: string;
+}
+interface props {
+    images: Logo[]
+}
+export const LogoSection = (contentOfLogoSection: props) => {
     return (
         <section className="logo-section" data-aos="fade-up">
             <div className="container">
                 <div className="logo-wrapper">
-                    {contentOfLogoSection.map( (el, index) => (
+                    {contentOfLogoSection.images.map( (el, index) => (
                         <div className="logo-card img-cd" key={el.srcImage + index}>
                             <figure>
                                 <Image src={el.srcImage} alt="logo of a company" width={200} height={200} />

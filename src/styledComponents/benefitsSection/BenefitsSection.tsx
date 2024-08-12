@@ -26,7 +26,18 @@ const contentOfBenefitsSection = {
     ]
 }
 
-export const BenefitsSection = () => {
+interface Card {
+    title: string;
+    info: string;
+    cardImgSrc: string;
+}
+
+interface BenefitsSectionContent {
+    title: string;
+    cards: Card[];
+}
+
+export const BenefitsSection = (contentOfBenefitsSection: BenefitsSectionContent) => {
     return (
         <section className="benefits-section">
             <div className="container">

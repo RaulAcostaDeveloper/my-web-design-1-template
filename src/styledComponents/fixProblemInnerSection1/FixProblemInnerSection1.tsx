@@ -20,7 +20,23 @@ const contentOfFixProblemInnerSection1 = {
         }
     ]
 }
-export const FixProblemInnerSection1 = () => {
+interface Card {
+    title: string;
+    info: string;
+    srcImage: string;
+}
+
+interface FixProblemInnerSectionContent {
+    title: string;
+    problemInnerImgSrc: string;
+    cards: Card[];
+}
+interface props {
+    title: string;
+    problemInnerImgSrc: string;
+    cards: Card[];
+}
+export const FixProblemInnerSection1 = (contentOfFixProblemInnerSection1: props) => {
     return (
         <section className="fix-problem-inner-section1" data-aos="fade-up">
             <div className="container">

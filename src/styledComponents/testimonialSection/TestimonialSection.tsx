@@ -64,7 +64,29 @@ const contentOfTestimonialSection = {
     ornamentImg4Src: '/img/tm-img4.png',
 }
 
-export const TestimonialSection = () => {
+interface SubInfo {
+    title: string;
+    info: string;
+}
+
+interface Slide {
+    title: string;
+    info: string;
+    headImgSrc: string;
+    subtitle: string;
+    subtitleImgSrc: string;
+    subInfo: SubInfo[];
+}
+
+interface TestimonialSectionContent {
+    slides: Slide[];
+    ornamentImg1Src: string;
+    ornamentImg2Src: string;
+    ornamentImg3Src: string;
+    ornamentImg4Src: string;
+}
+
+export const TestimonialSection = (contentOfTestimonialSection: TestimonialSectionContent) => {
     const thisElement = useRef(null);
     useEffect(() => {
         if (thisElement.current) {
