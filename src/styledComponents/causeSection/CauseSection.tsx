@@ -2,6 +2,7 @@
 import Splide from "@splidejs/splide";
 import Image from "next/image"
 import { useEffect, useRef } from "react";
+
 let renderCounter = 1;
 
 interface SplideElement {
@@ -72,12 +73,12 @@ export const CauseSection = (contentOfCauseSection: props) => {
                 </div>
                 <div className="bg-gradient cause-g1 img-cd">
                     <figure>
-                        <Image src="/img/cause-g1.png" alt="shadow" width={1200} height={1200} />
+                        <img src="/img/cause-g1.png" alt="shadow"/>
                     </figure>
                 </div>
                 <div className="bg-gradient cause-g2 img-cd">
                     <figure>
-                        <Image src="/img/cause-g2.png" alt="shadow" width={1200} height={1200} />
+                        <img src="/img/cause-g2.png" alt="shadow"/>
                     </figure>
                 </div>
             </div>

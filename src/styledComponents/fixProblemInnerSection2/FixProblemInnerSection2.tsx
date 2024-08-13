@@ -46,7 +46,7 @@ export const FixProblemInnerSection2 = (contentOfFixProblemInnerSection2: FixPro
             </div>
             <div className="bg-wave wave-2 img-cd">
                 <figure>
-                    <Image className="wave-img" src="/img/problem-wave2.png" alt="wave ornament" width={700} height={700} />
+                    <img className="wave-img" src="/img/problem-wave2.png" alt="wave ornament"/>
                 </figure>
             </div>
         </section>

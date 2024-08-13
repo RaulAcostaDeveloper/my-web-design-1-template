@@ -128,12 +128,11 @@
         height: auto;
         top: 2px;
     }
-}
-
-.hero-wave-1 {
-    left: -3%;
-    bottom: 20%;
-    top: auto;
+    .hero-wave-1 {
+        left: -3%;
+        bottom: 20%;
+        top: auto;
+    }
 }
 
 @include desktop {

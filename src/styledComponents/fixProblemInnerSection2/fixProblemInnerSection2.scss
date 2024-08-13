@@ -39,6 +39,12 @@
 }
 
 @include medium {
+    .fix-problem-inner-section2 {
+        .problem-inner1-right {
+            padding-right: 0px;
+        }
+    }
+
     .fix-problem-inner-section2 .fix-problem-inner1 {
         flex-direction: column-reverse;
     }

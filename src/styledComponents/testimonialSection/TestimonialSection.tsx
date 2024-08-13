@@ -4,66 +4,6 @@ import Image from "next/image"
 import { useEffect, useRef } from "react";
 let renderCounter = 1;
 
-const contentOfTestimonialSection = {
-    slides: [
-        {
-            title: '"A 360 degree view of all my projects."',
-            info: '"SaasBox lets us create a month’s worth of content in one week for our clients, allowing us to spend the rest of the month engaging and optimizing.”',
-            headImgSrc: '/img/quatation-mark.svg',
-            subtitle: 'Sophia Thompson, Founder & CEO, Socially',
-            subtitleImgSrc: '/img/client1.png',
-            subInfo: [
-                {
-                    title: '23%',
-                    info: 'more followers within a month'
-                },
-                {
-                    title: '14X',
-                    info: 'Return on Investment'
-                }
-            ]
-        },
-        {
-            title: '"Helps me stay on top of all marketing."',
-            info: '"With SaasBox, I can have a clear view of all metrics and analytics to make necessary changes in my marketing strategies. I am able to catch up with current trends and manage all our social media channels without too much effort."',
-            headImgSrc: '/img/quatation-mark.svg',
-            subtitle: 'Elle Rabe, co-founder, Falcon',
-            subtitleImgSrc: '/img/client2.png',
-            subInfo: [
-                {
-                    title: '14%',
-                    info: 'more followers within a month'
-                },
-                {
-                    title: '8X',
-                    info: 'Return on Investment'
-                }
-            ]
-        },
-        {
-            title: 'Customer X achieved 14x ROI in the first month !',
-            info: 'Explain how the customer was in a similar situation as your user, struggling with similar problems. Talk about their transition to your product and the outcome: how it solved their problems and helped them achieve their goals.',
-            headImgSrc: '/img/quatation-mark.svg',
-            subtitle: 'Lisa Hayden',
-            subtitleImgSrc: '/img/client3.png',
-            subInfo: [
-                {
-                    title: '23%',
-                    info: 'Primary Result Stat'
-                },
-                {
-                    title: '14X',
-                    info: 'Return on Investment'
-                }
-            ]
-        },
-    ],
-    ornamentImg1Src: '/img/tm-img1.png',
-    ornamentImg2Src: '/img/tm-img2.png',
-    ornamentImg3Src: '/img/tm-img3.png',
-    ornamentImg4Src: '/img/tm-img4.png',
-}
-
 interface SubInfo {
     title: string;
     info: string;

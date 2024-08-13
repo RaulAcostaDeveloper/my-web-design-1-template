@@ -1,20 +1,5 @@
 import Image from "next/image"
-const contentOfContactSection = {
-    title: 'Transform the way you handle your social media, transform the way you do business.',
-    subtitle: 'Learn how SaasBox can help take your social media marketing to the next level.',
-    form: {
-        placeholder: 'Enter your mail',
-        srcIcon: '/img/mail.png',
-        button: {
-            title: 'Start for free',
-            callBack: () => { console.log('button ressed') }
-        }
-    },
-    ornamentImg1Src: '/img/tm-img1.png',
-    ornamentImg2Src: '/img/tm-img2.png',
-    ornamentImg3Src: '/img/tm-img3.png',
-    ornamentImg4Src: '/img/tm-img4.png',
-}
+
 interface Button {
     title: string;
     callBack: () => void;
@@ -58,17 +43,17 @@ export const ContactSection = (contentOfContactSection: ContactSectionContent) =
             </div>
             <div className="bg-wave contact-wave img-cd">
                 <figure>
-                    <Image className="wave-img" src="/img/contact-wave.png" alt="shadow" width={1200} height={300} />
+                    <img className="wave-img" src="/img/contact-wave.png" alt="shadow"/>
                 </figure>
             </div>
             <div className="bg-gradient img-cd contact-bg1">
                 <figure>
-                    <Image src="/img/contact-bg1.png" alt="shadow" width={1200} height={1200} />
+                    <img src="/img/contact-bg1.png" alt="shadow"/>
                 </figure>
             </div>
             <div className="bg-gradient img-cd contact-bg2">
                 <figure>
-                    <Image src="/img/contact-bg2.png" alt="shadow" width={1200} height={1200} />
+                    <img src="/img/contact-bg2.png" alt="shadow"/>
                 </figure>
             </div>
             <div className="contact-pro1 img-cd email-img1">

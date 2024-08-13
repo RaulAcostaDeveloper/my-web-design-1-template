@@ -49,7 +49,7 @@ export const YourPage1 = () => {
     }, []);
 
     return (
-        <div>
+        <div className="pageTemplate">
             <Navbar
                 srcLogo="/img/logo.png"
                 hrefLogo="#"

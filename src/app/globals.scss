@@ -144,6 +144,9 @@ form {
     opacity: 0;
 }
 
+.pageTemplate {
+    overflow: hidden;
+}
 @include medium {
 
     .container {
@@ -168,7 +171,7 @@ form {
     }
 
     h2 {
-        font-size: 36px !important;
+        font-size: 34px !important;
         width: 100%;
     }
 

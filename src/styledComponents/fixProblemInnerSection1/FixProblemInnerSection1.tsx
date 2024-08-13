@@ -1,25 +1,5 @@
 import Image from "next/image"
-const contentOfFixProblemInnerSection1 = {
-    title: 'Social media management doesn\'t have to be a headache.',
-    problemInnerImgSrc: '/img/problem-img-left.png',
-    cards: [
-        {
-            title: 'A centralised hub for all your social media',
-            info: 'Monitor social activity and organize all posts, reviews, and customer engagement from a single platform.',
-            srcImage: '/img/problem-r1.svg'
-        },
-        {
-            title: 'Keep your audience engaged',
-            info: 'Deliver content that resonates with your customers. Keep track of what is working, with engagement tools.',
-            srcImage: '/img/problem-r2.svg'
-        },
-        {
-            title: 'Build better marketing strategies',
-            info: 'Track campaign performance across all social media with detailed reports. Gain a clear picture of what’s working, and what isn\'t.',
-            srcImage: '/img/problem-r3.svg'
-        }
-    ]
-}
+
 interface Card {
     title: string;
     info: string;
@@ -36,6 +16,7 @@ interface props {
     problemInnerImgSrc: string;
     cards: Card[];
 }
+
 export const FixProblemInnerSection1 = (contentOfFixProblemInnerSection1: props) => {
     return (
         <section className="fix-problem-inner-section1" data-aos="fade-up">
@@ -70,7 +51,7 @@ export const FixProblemInnerSection1 = (contentOfFixProblemInnerSection1: props)
             </div>
             <div className="bg-wave wave-1 img-cd">
                 <figure>
-                    <Image className="wave-img" src="/img/problem-wave.png" alt="ornament wave" width={700} height={600} />
+                    <img className="wave-img" src="/img/problem-wave.png" alt="ornament wave"/>
                 </figure>
             </div>
         </section>
