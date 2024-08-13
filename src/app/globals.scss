@@ -70,7 +70,7 @@ form {
     align-items: center;
     gap: 5px;
     box-shadow: 7px 7px 100px 0 rgba(129, 129, 172, 0.15);
-    width: 62%;
+    width: 65%;
     margin: 0 auto;
     margin-top: 35px;
 
@@ -144,6 +144,24 @@ form {
     opacity: 0;
 }
 
+@include medium {
+
+    .container {
+        padding: 0 30px;
+    }
+
+
+    h2 {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .benefits-section h2 {
+        width: 100%;
+    }
+
+}
+
 @include tablet {
     .container {
         padding: 0 25px;
@@ -180,22 +198,4 @@ form {
             width: 100%;
         }
     }
-}
-
-@include medium {
-
-    .container {
-        padding: 0 30px;
-    }
-
-
-    h2 {
-        width: 80%;
-        margin: 0 auto;
-    }
-
-    .benefits-section h2 {
-        width: 100%;
-    }
-
 }

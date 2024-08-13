@@ -25,31 +25,31 @@
             top: 2px;
         }
     }
+    .contact-wave {
+        left: 0%;
+        top: -15%;
+        right: 0%;
+        bottom: auto;
+    }
+    .contact-bg1 {
+        left: 0%;
+        top: auto;
+        right: auto;
+        bottom: -39%;
+        width: 70%;
+    }
+    
+    .contact-bg2 {
+        left: auto;
+        top: -16%;
+        right: -12%;
+        bottom: auto;
+        width: 70%;
+        // height: 100%;
+    }
 }
 
-.contact-wave {
-    left: 0%;
-    top: -15%;
-    right: 0%;
-    bottom: auto;
-}
 
-.contact-bg1 {
-    left: 0%;
-    top: auto;
-    right: auto;
-    bottom: -39%;
-    width: 70%;
-}
-
-.contact-bg2 {
-    left: auto;
-    top: -16%;
-    right: -12%;
-    bottom: auto;
-    width: 70%;
-    // height: 100%;
-}
 
 .email-img1 {
     position: absolute;
@@ -137,6 +137,21 @@
     transform-style: preserve-3d;
 }
 
+@include large-desktop {
+    .contact-wave {
+        top: -15%;
+    }
+}
+
+@include desktop {
+    .contact-wave {
+        left: 0%;
+        top: -5%;
+        right: 0%;
+        bottom: auto;
+    }
+}
+
 @include tablet {
     .contact-section {
         padding-top: 60px;
@@ -159,20 +174,5 @@
             height: 40px;
             bottom: 4%;
         }
-    }
-}
-
-@include desktop {
-    .contact-wave {
-        left: 0%;
-        top: -5%;
-        right: 0%;
-        bottom: auto;
-    }
-}
-
-@include large-desktop {
-    .contact-wave {
-        top: -15%;
     }
 }

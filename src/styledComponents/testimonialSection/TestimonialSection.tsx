@@ -179,7 +179,8 @@ export const TestimonialSection = (contentOfTestimonialSection: TestimonialSecti
             </div>
             <div className="bg-gradient tm-g1 img-cd">
                 <figure>
-                    <Image src="/img/bg-gradient-tm.png" alt="ornament icon" width={1200} height={1200} />
+                <img src="./img/bg-gradient-tm.png" alt="ornament icon"/>
+
                 </figure>
             </div>
         </section>

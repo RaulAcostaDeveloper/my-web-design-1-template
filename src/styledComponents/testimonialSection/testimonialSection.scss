@@ -2,7 +2,19 @@
     padding: 110px 0 140px 0;
     position: relative;
     width: 100%;
+    .tm-g1 {
+        left: auto;
+        top: auto;
+        right: -47%;
+        bottom: -36%;
+        width: 90%;
+    
+        img {
+            object-fit: contain;
+        }
+    }
 }
+
 
 .tm-ab-img1 {
     position: absolute;
@@ -63,18 +75,6 @@
     overflow: hidden;
     width: 55px;
     height: 55px;
-
-    img {
-        object-fit: contain;
-    }
-}
-
-.tm-g1 {
-    left: auto;
-    top: auto;
-    right: -47%;
-    bottom: -36%;
-    width: 90%;
 
     img {
         object-fit: contain;

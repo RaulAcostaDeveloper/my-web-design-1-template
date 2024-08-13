@@ -49,7 +49,7 @@ export const YourPage1 = () => {
     }, []);
 
     return (
-        <>
+        <div>
             <Navbar
                 srcLogo="/img/logo.png"
                 hrefLogo="#"
@@ -417,6 +417,6 @@ export const YourPage1 = () => {
                     },
                 ]}
             />
-        </>
+        </div>
     )
 }

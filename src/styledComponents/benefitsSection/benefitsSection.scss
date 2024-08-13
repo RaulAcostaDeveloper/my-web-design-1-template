@@ -40,44 +40,45 @@
             }
         }
     }
-}
-
-.benefits-g1 {
-    left: -47%;
-    top: 23%;
-    right: auto;
-    bottom: 0%;
-    width: 90%;
-
-    img {
-        object-fit: contain;
+    .benefits-g1 {
+        left: -47%;
+        top: 23%;
+        right: auto;
+        bottom: 0%;
+        width: 90%;
+    
+        img {
+            object-fit: contain;
+        }
+    }
+    .benefits-g2 {
+        left: auto;
+        top: -33%;
+        right: -45%;
+        bottom: 0%;
+    
+        img {
+            object-fit: contain;
+        }
+    }
+    
+    .benefits-g3 {
+        left: 0%;
+        top: 0%;
+        right: 0%;
+        bottom: 0%;
+        width: 60%;
+        margin-right: auto;
+        margin-left: auto;
+    
+        img {
+            object-fit: contain;
+        }
     }
 }
 
-.benefits-g2 {
-    left: auto;
-    top: -33%;
-    right: -45%;
-    bottom: 0%;
 
-    img {
-        object-fit: contain;
-    }
-}
 
-.benefits-g3 {
-    left: 0%;
-    top: 0%;
-    right: 0%;
-    bottom: 0%;
-    width: 60%;
-    margin-right: auto;
-    margin-left: auto;
-
-    img {
-        object-fit: contain;
-    }
-}
 
 @include tablet {
     .benefits-section .benefits-wrapper {

@@ -66,7 +66,7 @@ export const Navbar = (contentOfNavbar: props) => {
                     <div id="logo">
                         <a href={contentOfNavbar.hrefLogo} className="img-cd">
                             <figure>
-                                <Image src={contentOfNavbar.srcLogo} alt="logo" width={100} height={100} />
+                                <Image src={contentOfNavbar.srcLogo} alt="logo" width={300} height={300} />
                             </figure>
                         </a>
                     </div>

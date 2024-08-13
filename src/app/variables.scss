@@ -4,14 +4,15 @@ $color-three: #8181ac;
 $color-four: #ffffff;
 $font-one: "Inter", sans-serif;
 
-@mixin small {
-    @media screen and (max-width: 345px) {
+@mixin large-desktop {
+    @media screen and (min-width: 1440px) {
         @content;
     }
 }
 
-@mixin tablet {
-    @media screen and (max-width:768px) {
+
+@mixin desktop {
+    @media screen and (min-width: 1280px) {
         @content;
     }
 }
@@ -22,14 +23,14 @@ $font-one: "Inter", sans-serif;
     }
 }
 
-@mixin desktop {
-    @media screen and (min-width: 1280px) {
+@mixin tablet {
+    @media screen and (max-width:768px) {
         @content;
     }
 }
 
-@mixin large-desktop {
-    @media screen and (min-width: 1440px) {
+@mixin small {
+    @media screen and (max-width: 345px) {
         @content;
     }
 }
