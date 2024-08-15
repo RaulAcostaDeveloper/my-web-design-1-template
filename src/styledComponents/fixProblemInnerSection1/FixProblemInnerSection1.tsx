@@ -1,23 +1,7 @@
 import Image from "next/image"
+import { FixProblemInnerSectionContent } from "./FixProblemInnerSection.model"
 
-interface Card {
-    title: string;
-    info: string;
-    srcImage: string;
-}
-
-interface FixProblemInnerSectionContent {
-    title: string;
-    problemInnerImgSrc: string;
-    cards: Card[];
-}
-interface props {
-    title: string;
-    problemInnerImgSrc: string;
-    cards: Card[];
-}
-
-export const FixProblemInnerSection1 = (contentOfFixProblemInnerSection1: props) => {
+export const FixProblemInnerSection1 = (contentOfFixProblemInnerSection1: FixProblemInnerSectionContent) => {
     return (
         <section className="fix-problem-inner-section1" data-aos="fade-up">
             <div className="container">

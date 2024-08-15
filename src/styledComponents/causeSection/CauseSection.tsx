@@ -2,20 +2,11 @@
 import Splide from "@splidejs/splide";
 import Image from "next/image"
 import { useEffect, useRef } from "react";
+import { CauseSectionContent } from "./CauseSection.model";
 
 let renderCounter = 1;
 
-interface SplideElement {
-    title: string;
-    subtitle: string;
-    srcImg: string;
-}
-
-interface props {
-    splideElements: SplideElement[];
-}
-
-export const CauseSection = (contentOfCauseSection: props) => {
+export const CauseSection = (contentOfCauseSection: CauseSectionContent) => {
     const thisElement = useRef(null);
     useEffect(() => {
         if (thisElement.current) {

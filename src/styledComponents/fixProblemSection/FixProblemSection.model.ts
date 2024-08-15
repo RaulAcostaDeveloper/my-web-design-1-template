@@ -1,0 +1,3 @@
+interface FixProblemSectionContent {
+    title: string
+}

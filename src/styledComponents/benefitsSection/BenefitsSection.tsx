@@ -1,15 +1,4 @@
-import Image from "next/image"
-
-interface Card {
-    title: string;
-    info: string;
-    cardImgSrc: string;
-}
-
-interface BenefitsSectionContent {
-    title: string;
-    cards: Card[];
-}
+import { BenefitsSectionContent } from "./BenefitsSection.model"
 
 export const BenefitsSection = (contentOfBenefitsSection: BenefitsSectionContent) => {
     return (

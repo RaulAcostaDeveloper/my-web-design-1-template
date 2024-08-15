@@ -1,12 +1,6 @@
-interface Logo {
-    srcImage: string;
-}
+import { LogoSectionContent } from "./LogoSection.model"
 
-interface props {
-    images: Logo[]
-}
-
-export const LogoSection = (contentOfLogoSection: props) => {
+export const LogoSection = (contentOfLogoSection: LogoSectionContent) => {
     return (
         <section className="logo-section" data-aos="fade-up">
             <div className="container">

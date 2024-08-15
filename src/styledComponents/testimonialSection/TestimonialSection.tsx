@@ -2,29 +2,9 @@
 import Splide from "@splidejs/splide";
 import Image from "next/image"
 import { useEffect, useRef } from "react";
+import { TestimonialSectionContent } from "./TestimonialSection.model";
+
 let renderCounter = 1;
-
-interface SubInfo {
-    title: string;
-    info: string;
-}
-
-interface Slide {
-    title: string;
-    info: string;
-    headImgSrc: string;
-    subtitle: string;
-    subtitleImgSrc: string;
-    subInfo: SubInfo[];
-}
-
-interface TestimonialSectionContent {
-    slides: Slide[];
-    ornamentImg1Src: string;
-    ornamentImg2Src: string;
-    ornamentImg3Src: string;
-    ornamentImg4Src: string;
-}
 
 export const TestimonialSection = (contentOfTestimonialSection: TestimonialSectionContent) => {
     const thisElement = useRef(null);

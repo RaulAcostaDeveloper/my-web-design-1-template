@@ -1,37 +1,5 @@
 import Image from "next/image"
-
-interface SocialMediaLink {
-    imgSrc: string;
-    href: string;
-}
-
-interface PageLink {
-    title: string;
-    href: string;
-}
-
-interface FooterSection {
-    title: string;
-    pages: PageLink[];
-}
-
-interface CopyrightInfo {
-    title: string;
-    propietario: PageLink;
-    platform: PageLink;
-}
-
-interface FooterContent {
-    srcLogo: string;
-    hrefLogo: string;
-    mailOfContact: string;
-    numberOfContact: string;
-    numberForHref: string;
-    socialMedia: SocialMediaLink[];
-    footerLinks: FooterSection[];
-    copyright: CopyrightInfo;
-    moreLinks: PageLink[];
-}
+import { FooterContent } from "./Footer.model"
 
 export const Footer = (contentOfFooter: FooterContent) => {
     return (

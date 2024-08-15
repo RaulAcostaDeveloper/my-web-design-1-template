@@ -1,0 +1,176 @@
+.testimonial-section
+  padding: 110px 0 140px 0
+  position: relative
+  width: 100%
+
+  .tm-g1
+    left: auto
+    top: auto
+    right: -47%
+    bottom: -36%
+    width: 90%
+
+    img
+      object-fit: contain
+
+.tm-ab-img1
+  position: absolute
+  left: 5%
+  top: 5%
+  right: auto
+  bottom: auto
+  overflow: hidden
+  width: 55px
+  height: 55px
+
+  img
+    object-fit: contain
+
+.tm-ab-img2
+  position: absolute
+  left: auto
+  top: 14%
+  right: 5%
+  bottom: auto
+  display: flex
+  overflow: hidden
+  width: 32px
+  height: 32px
+  flex-direction: column
+  justify-content: center
+  align-items: center
+
+  img
+    object-fit: contain
+
+.tm-ab-img3
+  position: absolute
+  left: auto
+  top: auto
+  right: 5%
+  bottom: 21%
+  z-index: 200
+  overflow: hidden
+  width: 55px
+  height: 55px
+
+  img
+    object-fit: contain
+
+.tm-ab-img4
+  position: absolute
+  left: 3%
+  top: auto
+  right: auto
+  bottom: 15%
+  overflow: hidden
+  width: 55px
+  height: 55px
+
+  img
+    object-fit: contain
+
+.testimonial-wrapper
+  max-width: 1000px
+  margin: 0 auto
+  background-image: url(/img/testimonial-bg.png)
+  background-position: 50% 100%
+  background-size: contain
+  background-repeat: no-repeat
+
+  .splide.testimonial-slider
+    visibility: visible
+
+    .testimonial-card
+      max-width: 650px
+      width: 100%
+      margin: 0 auto
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      gap: 25px
+      text-align: center !important
+
+      .quat-img
+        width: 32px
+        margin: 0 auto
+
+      h2
+        font-size: 38px
+        color: $color-one
+
+      .client-wrapper
+        display: flex
+        align-items: center
+        gap: 8px
+
+        .client-img
+          width: 32px
+
+        h3
+          font-size: 16px
+          color: $color-one
+
+      .percentage-wrapper
+        margin-top: 50px
+        display: flex
+        gap: 50px
+        align-items: center
+        justify-content: space-around
+
+        .percentage-card
+          display: flex
+          flex-direction: column
+          gap: 20px
+
+          h4
+            color: $color-one
+            font-size: 72px
+
+          h5
+            color: $color-one
+            font-size: 18px
+            font-weight: 400
+
+.testimonial-slider .splide__arrow--prev
+  background-image: url('/img/testimonial-arrow-prev.svg')
+  background-size: contain
+  background-repeat: no-repeat
+  width: 55px
+  height: 55px
+  border: none
+  opacity: 1
+  box-shadow: 12px 12px 35px 0 rgba(152, 148, 172, 0.25)
+
+.testimonial-slider .splide__arrow--next
+  background-image: url('/img/testimonial-arrow-next.svg')
+  background-size: contain
+  background-repeat: no-repeat
+  width: 55px
+  height: 55px
+  border: none
+  opacity: 1
+  box-shadow: 12px 12px 35px 0 rgba(152, 148, 172, 0.25)
+
++tablet
+  .testimonial-section
+    padding-bottom: 20px
+
+  .testimonial-wrapper .splide.testimonial-slider .testimonial-card .percentage-wrapper
+    flex-direction: column
+
+  .testimonial-wrapper .splide.testimonial-slider .testimonial-card .percentage-wrapper .percentage-card h4
+    font-size: 60px
+
+  .testimonial-slider .splide__arrow--prev
+    bottom: -50px
+    left: 40%
+    transform: translateX(-60%)
+    top: unset
+
+  .testimonial-slider .splide__arrow--next
+    bottom: -50px
+    left: 60%
+    transform: translateX(-40%)
+    top: unset

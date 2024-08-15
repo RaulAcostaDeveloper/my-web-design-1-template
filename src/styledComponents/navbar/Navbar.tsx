@@ -1,31 +1,9 @@
 'use client'
 
 import Image from "next/image";
+import { NavbarContent } from "./Navbar.model";
 
-interface MenuSection {
-    href: string;
-    title: string;
-}
-
-interface Button {
-    title: string;
-    href: string;
-}
-
-interface Cart {
-    href: string;
-    quantity: number;
-}
-
-interface props {
-    srcLogo: string;
-    hrefLogo: string;
-    menuSections: MenuSection[];
-    principalButton: Button;
-    cart: Cart;
-}
-
-export const Navbar = (contentOfNavbar: props) => {
+export const Navbar = (contentOfNavbar: NavbarContent) => {
     const closeNav = () => {
         const menu = document.getElementById('menu');
         const menuToggle = document.getElementById('menuToggle');

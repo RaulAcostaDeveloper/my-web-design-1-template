@@ -1,25 +1,5 @@
 import Image from "next/image"
-
-interface Button {
-    title: string;
-    callBack: () => void;
-}
-
-interface Form {
-    placeholder: string;
-    srcIcon: string;
-    button: Button;
-}
-
-interface ContactSectionContent {
-    title: string;
-    subtitle: string;
-    form: Form;
-    ornamentImg1Src: string;
-    ornamentImg2Src: string;
-    ornamentImg3Src: string;
-    ornamentImg4Src: string;
-}
+import { ContactSectionContent } from "./ContactSection.model"
 
 export const ContactSection = (contentOfContactSection: ContactSectionContent) => {
     return (

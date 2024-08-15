@@ -1,8 +1,4 @@
-interface props {
-    title: string
-}
-
-export const FixProblemSection = (contentOfFixProblemSection: props) => {
+export const FixProblemSection = (contentOfFixProblemSection: FixProblemSectionContent) => {
     return (
         <section className="fix-problem-section" data-aos="fade-up">
             <div className="container">

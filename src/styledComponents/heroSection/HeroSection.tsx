@@ -1,33 +1,7 @@
 import Image from "next/image"
+import { HeroSectionContent } from "./HeroSection.model"
 
-interface Button {
-    title: string;
-    callBack: () => void;
-}
-
-interface Form {
-    placeholder: string;
-    srcIcon: string;
-    button: Button;
-}
-
-interface Feature {
-    title: string;
-}
-
-interface props {
-    title: string;
-    subTitle: string;
-    form: Form;
-    features: Feature[];
-    principalImageSrc: string;
-    socialMediaIconSrc1: string;
-    socialMediaIconSrc2: string;
-    socialMediaIconSrc3: string;
-    waveImageSrc: string;
-}
-
-export const HeroSection = (contentOfHeroSection: props) => {
+export const HeroSection = (contentOfHeroSection: HeroSectionContent) => {
     return (
         <section className="hero-section">
             <div className="container">
