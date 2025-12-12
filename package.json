@@ -11,7 +11,7 @@
   "dependencies": {
     "@splidejs/splide": "^4.1.4",
     "aos": "^2.3.4",
-    "next": "14.2.5",
+    "next": "14.2.35",
     "react": "^18",
     "react-dom": "^18",
     "sass": "^1.77.8"
